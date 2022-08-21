@@ -4,14 +4,23 @@
         "es2021": true,
         "node": true
     },
-    "extends": "airbnb-base",
-    "overrides": [
-    ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
+    "extends": [
+        "airbnb",
+        "prettier",
+        "plugin:node/recommended"
+    ],
+    "plugins": [
+        "prettier"
+    ],
     "rules": {
-        "linebreak-style": 0,
-        "no-console":"off"
+        "prettier/prettier": "error",
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "no-process-exit": "off",
+        "class-methods-use-this": "off"
     }
 }
