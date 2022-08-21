@@ -95,12 +95,15 @@ const getBookByIdHandler = (request, h) => {
   const book = books.filter((n) => n.id === id)[0];
 
   if (book !== undefined) {
-    return {
+    const response = h.response({
       status: 'success',
       data: {
-        note,
+        book,
       },
-    };
+    });
+
+    response.code(200);
+    return response;
   }
 
   const response = h.response({

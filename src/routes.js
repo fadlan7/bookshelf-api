@@ -17,7 +17,7 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/notes/{id}',
+    path: '/books/{id}',
     handler: getBookByIdHandler,
   },
 ];
